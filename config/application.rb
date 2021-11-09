@@ -30,6 +30,7 @@ module AwesomeEvents
     # in config/environments, which are processed later.
     #
     config.time_zone = 'Tokyo'
+    config.i18n.default_locale = :ja
     # config.eager_load_paths << Rails.root.join("extras")
     config.action_view.form_with_generates_remote_forms = true
   end
