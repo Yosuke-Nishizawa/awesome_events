@@ -57,4 +57,15 @@ class EventsTest < ApplicationSystemTestCase
       assert_selector 'div.alert', text: '削除しました'
     end
   end
+
+  test '/ ページを表示して、未来のイベントは表示、過去のイベントは非表示であること' do
+    future_event = FactoryBot.create(:event, start_at: Time.zone.now + 3.day)
+    past_event = FactoryBot.create(:event, start_at: Time.zone.now + 1.day)
+
+    travel_to Time.zone.now + 2.day do
+      visit root_url
+      assert_selector 'h5', text: future_event.name
+      assert_no_selector 'h5', text: past_event.name
+    end
+  end
 end
