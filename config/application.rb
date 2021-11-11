@@ -33,5 +33,6 @@ module AwesomeEvents
     config.i18n.default_locale = :ja
     # config.eager_load_paths << Rails.root.join("extras")
     config.action_view.form_with_generates_remote_forms = true
+    config.active_storage.variant_processor = :vips
   end
 end
