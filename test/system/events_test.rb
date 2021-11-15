@@ -64,6 +64,7 @@ class EventsTest < ApplicationSystemTestCase
 
     travel_to Time.zone.now + 2.day do
       visit root_url
+      sleep 0.1
       assert_selector 'h5', text: future_event.name
       assert_no_selector 'h5', text: past_event.name
     end
