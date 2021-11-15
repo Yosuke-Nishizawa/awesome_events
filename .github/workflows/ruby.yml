@@ -14,7 +14,7 @@ jobs:
           sudo swapoff -a
           sudo sysctl -w vm.swappiness=1
           sudo sysctl -w fs.file-max=262144
-      - nae: Run Elasticsearch
+      - name: Run Elasticsearch
         uses: Yosuke-Nishizawa/elasticsearch-with-plugins-action@v1
         with:
           stack-version: 7.6.0
