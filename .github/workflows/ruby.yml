@@ -15,7 +15,7 @@ jobs:
           sudo sysctl -w vm.swappiness=1
           sudo sysctl -w fs.file-max=262144
       - name: Run Elasticsearch
-        uses: Yosuke-Nishizawa/elasticsearch-with-plugins-action@v2
+        uses: Yosuke-Nishizawa/elasticsearch-with-plugins-action@v3
         with:
           stack-version: 7.6.0
           plugins: |
