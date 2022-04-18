@@ -62,7 +62,7 @@ gem 'omniauth-rails_csrf_protection', '~> 1.0.0'
 
 gem 'rails-i18n', '~> 6.0.0'
 
-gem 'active_storage_validations', '~> 0.9.5'
+gem 'active_storage_validations', '~> 0.9.8'
 
 gem 'kaminari', '~> 1.2.0'
 
